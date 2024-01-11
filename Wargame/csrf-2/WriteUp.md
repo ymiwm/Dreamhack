@@ -268,7 +268,7 @@ Framework: Flask, Selenium
 
 ### 6. Conclusion
 
-WIP
+
 
 ---
 
