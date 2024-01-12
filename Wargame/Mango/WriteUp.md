@@ -188,7 +188,12 @@ for i in range(32):
 ### 6. Conclusion
 Dreamhack에서 제공하는 Blind SQL Injection Exploit Code를 접하기 전, 문제에 관해 찾아보고 작성한 코드라 효율성이 상당히 떨어진다.  
 ASCII Code로 변환 후 Binary Search를 이용하여 Refactoring이 가능하다.  
-시간 복잡도: *O(N)* -> *O(logN)*
+시간 복잡도: $O(N)$ -> $O(logN)$  
+exploit.py의 시간복잡도는  
+(`ALPHANUMERIC`의 개수) x (`upw`의 길이) = $62 * 32 = 1984$  
+Refactoring을 거치면  
+(log(`ALPHANUMERIC`의 개수)) x (`upw`의 길이) $\approx 6 * 32 = 192$  
+시간복잡도가 10배 이상 줄어든 것을 확인 할 수 있다.
 
 ---
 
