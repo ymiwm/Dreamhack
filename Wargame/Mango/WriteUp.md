@@ -22,7 +22,7 @@ Database: MongoDB
 
 2. Vulnerability<a href="#2-vunerability"><sup>[2]</sup></a>
 
-    - NoSQL Injection
+    - Blind NoSQL Injection
 
 3. Scenario<a href="#3-scenario"><sup>[3]</sup></a>
 
@@ -114,7 +114,9 @@ Database: MongoDB
 ---
 
 ### 2. Vunerability
-- NoSQL Injection: 동적 쿼리를 생성하며, 타입 체크 및 쿼리에 대한 검증이 따로 없다. 필터가 존재하나 약한 필터라 평가된다.
+- Blind NoSQL Injection:  
+    동적 쿼리를 생성하며, 타입 체크 및 쿼리에 대한 검증이 따로 없다. 필터가 존재하나 약한 필터라 평가된다.
+    쿼리에 대한 응답이 아닌, 쿼리에 해당하는 `uid`를 출력해주기에 Blind NoSQL Injection을 이용해 `upw`를 찾아야한다.
 
 ---
 
