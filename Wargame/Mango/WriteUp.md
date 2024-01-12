@@ -114,7 +114,7 @@ Database: MongoDB
 ---
 
 ### 2. Vunerability
-- NoSQL Injection: 동적 쿼리를 생성하며, 쿼리에 대한 검증이 따로 없다. 필터가 존재하나 약한 필터라 평가된다.
+- NoSQL Injection: 동적 쿼리를 생성하며, 타입 체크 및 쿼리에 대한 검증이 따로 없다. 필터가 존재하나 약한 필터라 평가된다.
 
 ---
 
