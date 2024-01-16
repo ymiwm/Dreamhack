@@ -87,7 +87,7 @@ Framework: Flask
     `POST` 요청 시
     - 파라미터로 들어온 `url`을 변수 `url`에 저장한 후, 변수 `urlp`에 파싱하여 저장한다.
     - 변수 `url`의 첫 char가 `"/"`라면 `http://localhost:8000`의 뒤에 붙여 변수 `url`에 저장한다.
-    - `urlp.netloc`(host + port 형태)내에 `"localhost"` 혹은 `"127.0.0.1"` 가 존재한다면 아래와 같은 필터링을 수행한다.
+    - `urlp.netloc`(host + port 형태)내에 `"localhost"` 혹은 `"127.0.0.1"` 가 존재한다면 아래와 같은 필터링을 수행한다.  
     *`error.png`를 data에 저장한 후, `base64`로 인코딩, `utf8`로 디코딩 하여 `img` 변수에 저장하여 `/img_viewer`에 파라미터로 전달하여 리턴한다.
     - 상단의 `elif` 구문에 들어가지 않았다면 `url`의 `content`를 `GET` 메서드로 요청하여, 상단의 별표(*)의 인코딩, 디코딩 부분의 작업을 진행한다.  
     (여기서 데이터는 `error.png`가 아니다.)
@@ -108,7 +108,8 @@ Framework: Flask
     SSRF(Server Side Request Forgery) 취약점이 드러나는 부분이다.  
     오픈된 포트가 존재하고, `localhost` 혹은 `loopback` 주소가 목적지이기에 외부에서 접근할 수 없다.  
     `local_server`의 주소는 `"127.0.0.1:(1500 ~ 1800)"`이다.  
-    `http.server.HTTPServer`의 두 번째 인자로 http.server.SimpleHttpRequestHandler를 전달하면, 현재 디렉터리를 기준으로 URL이 가리키는 리소스를 반환하는 웹 서버가 생성된다.  
+    `http.server.HTTPServer`의 두 번째 인자로 http.server.SimpleHttpRequestHandler를 전달하면,  
+    현재 디렉터리를 기준으로 URL이 가리키는 리소스를 반환하는 웹 서버가 생성된다.  
     (Hint의 `flag.txt`의 위치를 기억하자.)
     
     </br>
