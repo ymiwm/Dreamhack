@@ -38,6 +38,7 @@ Framework: Flask
 - main.js
 
     - Hint
+
     ```python
     try:
         FLAG = open("./flag.txt", "r").read()  # Flag is here!!
@@ -50,6 +51,7 @@ Framework: Flask
     <br/>
 
     - `/`
+
     ```python
     app.route("/")
     def index():
@@ -60,6 +62,7 @@ Framework: Flask
     </br>
     
     - `/img_viewer`
+
     ```python
     @app.route("/img_viewer", methods=["GET", "POST"])
     def img_viewer():
@@ -85,18 +88,19 @@ Framework: Flask
     `GET`, `POST` 메서드 요청을 받는다.  
     `GET` 요청 시 `img_viewer.html` 페이지를 표시해준다.  
     `POST` 요청 시
-    - 파라미터로 들어온 `url`을 변수 `url`에 저장한 후, 변수 `urlp`에 파싱하여 저장한다.
-    - 변수 `url`의 첫 char가 `"/"`라면 `http://localhost:8000`의 뒤에 붙여 변수 `url`에 저장한다.
-    - `urlp.netloc`(host + port 형태)내에 `"localhost"` 혹은 `"127.0.0.1"` 가 존재한다면 아래와 같은 필터링을 수행한다.  
-    *`error.png`를 data에 저장한 후, `base64`로 인코딩, `utf8`로 디코딩 하여 `img` 변수에 저장하여 `/img_viewer`에 파라미터로 전달하여 리턴한다.
-    - 상단의 `elif` 구문에 들어가지 않았다면 `url`의 `content`를 `GET` 메서드로 요청하여, 상단의 별표(*)의 인코딩, 디코딩 부분의 작업을 진행한다.  
-    (여기서 데이터는 `error.png`가 아니다.)
-    - `timeout`을 포함한 `exception` 발생 시 상단의 별표(*)의 과정을 똑같이 수행한다.  
-    (여기서 데이터는 `error.png`이다.)
+        - 파라미터로 들어온 `url`을 변수 `url`에 저장한 후, 변수 `urlp`에 파싱하여 저장한다.
+        - 변수 `url`의 첫 char가 `"/"`라면 `http://localhost:8000`의 뒤에 붙여 변수 `url`에 저장한다.
+        - `urlp.netloc`(host + port 형태)내에 `"localhost"` 혹은 `"127.0.0.1"` 가 존재한다면 아래와 같은 필터링을 수행한다.  
+        *`error.png`를 data에 저장한 후, `base64`로 인코딩, `utf8`로 디코딩 하여 `img` 변수에 저장하여 `/img_viewer`에 파라미터로 전달하여 리턴한다.
+        - 상단의 `elif` 구문에 들어가지 않았다면 `url`의 `content`를 `GET` 메서드로 요청하여, 상단의 별표(*)의 인코딩, 디코딩 부분의 작업을 진행한다.  
+        (여기서 데이터는 `error.png`가 아니다.)
+        - `timeout`을 포함한 `exception` 발생 시 상단의 별표(*)의 과정을 똑같이 수행한다.  
+        (여기서 데이터는 `error.png`이다.)
 
     <br/>
 
     - `local_server(local_host + local_port)`
+
     ```python
     local_host = "127.0.0.1"
     local_port = random.randint(1500, 1800)
@@ -115,6 +119,7 @@ Framework: Flask
     </br>
     
     - `run_local_server`
+    
     ```python
     def run_local_server():
         local_server.serve_forever()
