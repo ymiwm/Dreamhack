@@ -175,7 +175,7 @@ f"http://Localhost:{internal_port}/flag.txt"
 
 ### 5. Exploit
 
-1. exploit.py
+1. exploit_adv.py
 ```python
 #!/usr/bin/python3
 import requests
