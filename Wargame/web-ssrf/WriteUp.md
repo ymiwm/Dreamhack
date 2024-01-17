@@ -35,7 +35,7 @@ Framework: Flask
 
 ### 1. Code Analysis
 
-- main.js
+- app.py
 
     - Hint
 
